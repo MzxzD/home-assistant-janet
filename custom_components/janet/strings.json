@@ -1,0 +1,22 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Connect to Janet",
+        "description": "Enter the connection details for your Janet instance.",
+        "data": {
+          "host": "Host",
+          "port": "API Port",
+          "websocket_port": "WebSocket Port"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Failed to connect to Janet. Please check the host and port.",
+      "unknown": "Unexpected error occurred."
+    },
+    "abort": {
+      "already_configured": "This Janet instance is already configured."
+    }
+  }
+}

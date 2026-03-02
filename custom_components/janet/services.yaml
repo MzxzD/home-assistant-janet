@@ -1,0 +1,30 @@
+speak:
+  name: Speak
+  description: Make Janet speak a message using text-to-speech.
+  fields:
+    message:
+      name: Message
+      description: The text message for Janet to speak.
+      required: true
+      example: "Hello, the front door is unlocked"
+      selector:
+        text:
+    voice:
+      name: Voice
+      description: Optional voice to use (if Janet supports multiple voices).
+      required: false
+      example: "default"
+      selector:
+        text:
+
+command:
+  name: Command
+  description: Send a voice command to Janet as if spoken by the user.
+  fields:
+    command:
+      name: Command
+      description: The voice command to send to Janet.
+      required: true
+      example: "Turn on the living room lights"
+      selector:
+        text:
