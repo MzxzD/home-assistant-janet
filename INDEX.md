@@ -202,8 +202,8 @@ React to Janet's actions.
 4. Review configuration
 
 ### Support
-- GitHub Issues: https://github.com/mzxzd/janet/issues
-- Documentation: https://github.com/mzxzd/janet/wiki
+- GitHub Issues: https://github.com/MzxzD/home-assistant-janet/issues
+- Documentation: https://github.com/MzxzD/home-assistant-janet/tree/main/docs
 
 ---
 

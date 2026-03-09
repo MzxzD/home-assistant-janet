@@ -1,0 +1,117 @@
+# Janet AI Companion - Home Assistant Dashboard Cards
+# Copy these into your Lovelace dashboard (Edit Dashboard → Add Card → Manual)
+
+# Card 1: Janet Status Card (Entities card - most common)
+# Shows all three Janet sensors in one card
+- type: entities
+  title: Janet AI Companion
+  icon: mdi:robot
+  show_header_toggle: false
+  entities:
+    - entity: sensor.janet_status
+      name: Status
+      icon: mdi:robot
+    - entity: sensor.janet_conversation
+      name: Conversation
+      icon: mdi:message-text
+    - entity: sensor.janet_memory
+      name: Memory
+      icon: mdi:database
+      unit: MB
+
+---
+# Card 2: Compact Glance Card
+# Minimal footprint, good for overview
+- type: glance
+  title: Janet
+  entities:
+    - entity: sensor.janet_status
+      name: Status
+    - entity: sensor.janet_conversation
+      name: Active
+    - entity: sensor.janet_memory
+      name: Memory (MB)
+
+---
+# Card 3: Vertical Stack with Status + Quick Actions
+# Status card with buttons to trigger Janet services
+- type: vertical-stack
+  cards:
+    - type: entities
+      title: Janet Status
+      icon: mdi:robot
+      entities:
+        - entity: sensor.janet_status
+        - entity: sensor.janet_conversation
+        - entity: sensor.janet_memory
+    - type: horizontal-stack
+      cards:
+        - type: button
+          entity: sensor.janet_status
+          name: Speak Test
+          tap_action:
+            action: call-service
+            service: janet.speak
+            service_data:
+              message: "Hello from dashboard"
+          icon: mdi:microphone
+        - type: button
+          entity: sensor.janet_status
+          name: Command
+          tap_action:
+            action: call-service
+            service: janet.command
+            service_data:
+              command: "What time is it?"
+          icon: mdi:chat
+
+---
+# Card 4: Single Entity (Status only)
+- type: entity
+  entity: sensor.janet_status
+  name: Janet
+  icon: mdi:robot
+
+---
+# Card 5: Text to Janet (type and send messages)
+# REQUIRES: Create an Input Text helper first (Settings → Devices & Services → Helpers → Text)
+#           Name: "Message to Janet", Entity ID: input_text.janet_message
+- type: vertical-stack
+  cards:
+    - type: entities
+      title: Text to Janet
+      icon: mdi:message-text
+      entities:
+        - entity: input_text.janet_message
+          name: Message
+          icon: mdi:chat
+    - type: horizontal-stack
+      cards:
+        - type: button
+          name: Send to Janet
+          tap_action:
+            action: call-service
+            service: janet.command
+            service_data:
+              command: "{{ states('input_text.janet_message') }}"
+          icon: mdi:send
+          show_state: false
+        - type: button
+          name: Clear
+          tap_action:
+            action: call-service
+            service: input_text.set_value
+            service_data:
+              entity_id: input_text.janet_message
+              value: ""
+          icon: mdi:eraser
+          show_state: false
+
+---
+# Card 6: Markdown Card with Status (informational)
+- type: markdown
+  title: Janet AI Companion
+  content: |
+    **Status:** {{ states('sensor.janet_status') }}
+    **Conversation:** {{ states('sensor.janet_conversation') }}
+    **Memory:** {{ states('sensor.janet_memory') }} MB

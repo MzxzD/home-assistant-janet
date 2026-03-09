@@ -4,9 +4,9 @@
   "codeowners": ["@mzxzd"],
   "config_flow": true,
   "dependencies": [],
-  "documentation": "https://github.com/mzxzd/janet",
+  "documentation": "https://github.com/MzxzD/home-assistant-janet",
   "iot_class": "local_push",
-  "issue_tracker": "https://github.com/mzxzd/janet/issues",
+  "issue_tracker": "https://github.com/MzxzD/home-assistant-janet/issues",
   "requirements": ["aiohttp>=3.8.0", "websockets>=10.0"],
   "version": "1.0.0",
   "integration_type": "hub"

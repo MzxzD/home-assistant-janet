@@ -236,4 +236,4 @@ See `README.md` for complete automation examples.
 
 ---
 
-**Need Help?** Open an issue on GitHub: https://github.com/mzxzd/janet/issues
+**Need Help?** Open an issue on GitHub: https://github.com/MzxzD/home-assistant-janet/issues

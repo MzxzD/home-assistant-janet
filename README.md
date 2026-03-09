@@ -1,11 +1,12 @@
 # Janet AI Companion - Home Assistant Integration
 
-[![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)](https://github.com/mzxzd/janet)
+[![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)](https://github.com/MzxzD/home-assistant-janet)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
+[![Janet Home Automation](https://img.shields.io/badge/docs-Home%20Automation-blue)](docs/INDEX.md)
 
-**Turn your Home Assistant into a bidirectional AI companion with Janet!**
+**Janet Home Automation — one repo.** Turn your Home Assistant into a bidirectional AI companion with Janet!
 
-This custom integration allows Home Assistant to communicate with [Janet](https://github.com/mzxzd/janet), enabling voice control, notifications, and intelligent automation.
+This custom integration allows Home Assistant to communicate with [Janet](https://github.com/MzxzD/JANET), enabling voice control, notifications, and intelligent automation.
 
 ## ✨ Features
 
@@ -28,6 +29,17 @@ This custom integration allows Home Assistant to communicate with [Janet](https:
 - `janet.speak` - Make Janet speak a message
 - `janet.command` - Send a voice command to Janet
 
+### 📊 Dashboard
+- Add Janet to your Lovelace dashboard - see **[DASHBOARD.md](DASHBOARD.md)** for copy-paste cards
+
+## 📚 Documentation
+
+Full Janet Home Automation docs (integration plan, quickstart, roadmap, troubleshooting):
+
+- **[docs/INDEX.md](docs/INDEX.md)** — Start here
+- **[docs/QUICKSTART.md](docs/QUICKSTART.md)** — Get running in 30 minutes
+- **[docs/SUMMARY.md](docs/SUMMARY.md)** — Overview and status
+
 ## 📦 Installation
 
 ### HACS (Recommended)
@@ -36,7 +48,7 @@ This custom integration allows Home Assistant to communicate with [Janet](https:
 2. Click on "Integrations"
 3. Click the three dots in the top right corner
 4. Select "Custom repositories"
-5. Add this repository URL: `https://github.com/mzxzd/janet`
+5. Add this repository URL: `https://github.com/MzxzD/home-assistant-janet`
 6. Category: "Integration"
 7. Click "Add"
 8. Find "Janet AI Companion" and click "Download"
@@ -54,7 +66,7 @@ This custom integration allows Home Assistant to communicate with [Janet](https:
 1. **Janet must be running** on your network
    - Default API port: `8080`
    - Default WebSocket port: `8765`
-   - See [Janet documentation](https://github.com/mzxzd/janet) for setup
+   - See [Janet documentation](https://github.com/MzxzD/JANET) and [docs/QUICKSTART.md](docs/QUICKSTART.md) for setup
 
 2. **Network connectivity** between Home Assistant and Janet
 
@@ -378,14 +390,15 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 🔗 Links
 
-- **Janet Project**: https://github.com/mzxzd/janet
-- **Documentation**: https://github.com/mzxzd/janet/wiki
-- **Issues**: https://github.com/mzxzd/janet/issues
+- **This Integration**: https://github.com/MzxzD/home-assistant-janet
+- **Documentation**: [docs/INDEX.md](docs/INDEX.md)
+- **Issues**: https://github.com/MzxzD/home-assistant-janet/issues
+- **Janet Ecosystem**: https://github.com/MzxzD/JANET
 - **Home Assistant**: https://www.home-assistant.io
 
 ## 🙏 Acknowledgments
 
-- Built for the [Janet AI Companion](https://github.com/mzxzd/janet) project
+- Built for the [Janet AI Companion](https://github.com/MzxzD/JANET) project
 - Inspired by the Home Assistant community
 - Constitutional AI principles from the Janet ecosystem
 
